@@ -26,7 +26,7 @@ function updateSessionSecret() {
     } else if (envContent) {
       envContent += `\nSESSION_SECRET=${newSecret}`;
     } else {
-      envContent = `PORT=7575\nSESSION_SECRET=${newSecret}\n`;    }
+      envContent = `PORT=3005\nSESSION_SECRET=${newSecret}\n`;    }
       fs.writeFileSync(envPath, envContent, 'utf8');
     
     console.log(`Session secret: ${newSecret.substring(0, 8)}...${newSecret.substring(newSecret.length - 8)}`);

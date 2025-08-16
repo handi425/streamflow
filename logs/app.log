@@ -1,0 +1,28 @@
+2025-08-16T10:01:42.267Z [ERROR] Error checking Google Drive API status: TypeError: Cannot read properties of undefined (reading 'gdrive_api_key')
+    at /home/tazen-live/htdocs/live.tazen.id/streamflow/app.js:971:25
+2025-08-16T10:02:07.127Z [LOG] Checking for scheduled streams (2025-08-16T10:02:07.126Z to 2025-08-16T10:03:07.126Z)
+2025-08-16T10:02:07.172Z [LOG] Checking for scheduled streams (2025-08-16T10:02:07.171Z to 2025-08-16T10:03:07.171Z)
+2025-08-16T10:03:07.127Z [LOG] Checking for scheduled streams (2025-08-16T10:03:07.127Z to 2025-08-16T10:04:07.127Z)
+2025-08-16T10:03:07.171Z [LOG] Checking for scheduled streams (2025-08-16T10:03:07.171Z to 2025-08-16T10:04:07.171Z)
+2025-08-16T10:04:07.127Z [LOG] Checking for scheduled streams (2025-08-16T10:04:07.127Z to 2025-08-16T10:05:07.127Z)
+2025-08-16T10:04:07.172Z [LOG] Checking for scheduled streams (2025-08-16T10:04:07.172Z to 2025-08-16T10:05:07.172Z)
+2025-08-16T10:04:20.490Z [LOG] Logger initialized. Output will be written to console and logs/app.log
+2025-08-16T10:04:20.853Z [LOG] Using system FFmpeg at: /usr/bin/ffmpeg
+2025-08-16T10:04:20.854Z [LOG] Stream scheduler initialized
+2025-08-16T10:04:20.854Z [LOG] Checking for scheduled streams (2025-08-16T10:04:20.854Z to 2025-08-16T10:05:20.854Z)
+2025-08-16T10:04:20.871Z [LOG] StreamFlow running at:
+2025-08-16T10:04:20.871Z [LOG]   http://82.29.166.20:3005
+2025-08-16T10:04:20.877Z [LOG] Stream scheduler initialized
+2025-08-16T10:04:20.877Z [LOG] Checking for scheduled streams (2025-08-16T10:04:20.877Z to 2025-08-16T10:05:20.877Z)
+2025-08-16T10:04:20.878Z [LOG] [StreamingService] Syncing stream statuses...
+2025-08-16T10:04:20.880Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-08-16T10:05:14.165Z [LOG] Updating user with query: UPDATE users SET gdrive_api_key = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?
+2025-08-16T10:05:14.165Z [LOG] Values: [
+  'AIzaSyAWylcEmsQ-tajtXPEeSY0fmuFXVjFJU7U',
+  '74738c30-14c4-412c-a66d-6c95ee77fd63'
+]
+2025-08-16T10:05:14.174Z [LOG] User updated successfully, changes: 1
+2025-08-16T10:05:20.855Z [LOG] Checking for scheduled streams (2025-08-16T10:05:20.854Z to 2025-08-16T10:06:20.854Z)
+2025-08-16T10:05:20.878Z [LOG] Checking for scheduled streams (2025-08-16T10:05:20.878Z to 2025-08-16T10:06:20.878Z)
+2025-08-16T10:06:20.856Z [LOG] Checking for scheduled streams (2025-08-16T10:06:20.855Z to 2025-08-16T10:07:20.855Z)
+2025-08-16T10:06:20.879Z [LOG] Checking for scheduled streams (2025-08-16T10:06:20.878Z to 2025-08-16T10:07:20.878Z)

@@ -38,7 +38,7 @@ process.on('uncaughtException', (error) => {
 });
 const app = express();
 app.set("trust proxy", 1);
-const port = process.env.PORT || 7575;
+const port = process.env.PORT || 3005;
 const tokens = new csrf();
 ensureDirectories();
 ensureDirectories();
@@ -967,6 +967,10 @@ app.get('/stream/:videoId', isAuthenticated, async (req, res) => {
 app.get('/api/settings/gdrive-status', isAuthenticated, async (req, res) => {
   try {
     const user = await User.findById(req.session.userId);
+    if (!user) {
+      req.session.destroy();
+      return res.status(401).json({ error: 'User not found' });
+    }
     res.json({
       hasApiKey: !!user.gdrive_api_key,
       message: user.gdrive_api_key ? 'Google Drive API key is configured' : 'No Google Drive API key found'

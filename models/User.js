@@ -56,9 +56,15 @@ class User {
       throw error;
     }
   }
-  static update(userId, userData) {
+  static async update(userId, userData) {
     const fields = [];
     const values = [];
+    
+    // Hash password if it's being updated
+    if (userData.password) {
+      userData.password = await bcrypt.hash(userData.password, 10);
+    }
+    
     Object.entries(userData).forEach(([key, value]) => {
       fields.push(`${key} = ?`);
       values.push(value);
@@ -66,11 +72,17 @@ class User {
     fields.push('updated_at = CURRENT_TIMESTAMP');
     values.push(userId);
     const query = `UPDATE users SET ${fields.join(', ')} WHERE id = ?`;
+    
+    console.log('Updating user with query:', query);
+    console.log('Values:', values);
+    
     return new Promise((resolve, reject) => {
       db.run(query, values, function (err) {
         if (err) {
+          console.error('Error updating user:', err);
           return reject(err);
         }
+        console.log('User updated successfully, changes:', this.changes);
         resolve({ id: userId, ...userData });
       });
     });
